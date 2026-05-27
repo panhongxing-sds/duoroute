@@ -1,0 +1,45 @@
+# Paper-ready SPO+ benchmark (official metrics: AvgAcc, Gap@O)
+# Usage:
+#   python3 scripts/run_spo_paper_experiments.py --gpu 0
+#   python3 scripts/spo_paper_report.py
+
+bench_config: config/baseline_config.yaml
+seeds: [42, 43, 44]
+train_ratio: 0.7
+val_ratio: 0.1
+alpha: 1.0
+
+embedllm:
+  epochs: 50
+  batch_size: 64
+  lr: 0.001
+  embed_model: baselines/spo/models/bge-small-en-v1.5
+  methods:
+    - {objective: bce_grouped, baseline_name: EmbedLLM}
+    - {objective: spo, baseline_name: EmbedLLM}
+    - {objective: bce_spo, spo_beta: 0.3, baseline_name: EmbedLLM}
+    - {objective: spo_tie, baseline_name: EmbedLLM}
+    - {objective: bce_spo_tie, spo_beta: 0.1, baseline_name: EmbedLLM}
+    - {objective: bce_spo_tie, spo_beta: 0.3, baseline_name: EmbedLLM}
+
+routellm_proxy:
+  enabled: true
+  methods:
+    - {objective: bce_grouped, baseline_name: RouteLLM-proxy}
+    - {objective: spo, baseline_name: RouteLLM-proxy}
+    - {objective: bce_spo, spo_beta: 0.3, baseline_name: RouteLLM-proxy}
+    - {objective: spo_tie, baseline_name: RouteLLM-proxy}
+    - {objective: bce_spo_tie, spo_beta: 0.3, baseline_name: RouteLLM-proxy}
+
+routerdc_lite:
+  enabled: true
+  epochs: 30
+  spo_weights: [0.0, 0.1, 0.5, 1.0]
+  # SPO+ plug-in: tie-aware only (vanilla SPO+ skipped)
+  spo_loss_types: [tie]
+
+graphrouter_lite:
+  enabled: true
+  train_epochs: 150
+  spo_weights: [0.0, 0.1, 0.3]
+  spo_loss_types: [tie]

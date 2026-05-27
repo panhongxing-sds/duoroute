@@ -1,0 +1,34 @@
+# Secrets / local overrides
+configs/embedding_api.local.yaml
+**/*.local.yaml
+
+# Python
+__pycache__/
+*.egg-info/
+.venv/
+
+# Large data & checkpoints (download via GitHub Release — see docs/DATA_DOWNLOAD.md)
+data/seed42_small/**
+data/seed42_flagship/**
+outputs/checkpoints/**
+
+# Other data dirs
+data/processed/
+data/seed42_exp/
+data/seed42_synth/
+
+# Build logs
+data/**/*.log
+
+# Embeddings & weights (shipped in release tarball)
+*.pth
+*.npz
+**/meta.json
+**/meta.json.gz
+
+# Regeneratable outputs
+outputs/**
+
+# Large benchmark data if copied locally
+llmbenchmark/results/bench/
+llmbenchmark/results/bench

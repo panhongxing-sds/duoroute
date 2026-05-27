@@ -1,0 +1,26 @@
+duoroute:
+  seed: 42
+  epochs: 30
+  batch_size: 64
+  lr: 0.001
+  hidden_dim: 64
+  embed_dim: 2048
+  alpha: 0.5
+  beta: 0.1
+  temperature: 0.5
+  lambda_cost: 0.2
+  cost_mode: per_query
+  reward_target: oracle_reward
+  distill_warmup_epochs: 3
+  use_id_fallback: false
+
+  # Bundled LLMRouterBench resources (see llmbenchmark/)
+  bench_config: llmbenchmark/config/baseline_config.yaml
+  bench_dir: llmbenchmark/results/bench
+  model_cards: configs/model_cards.yaml
+  llmbench_graphrouter_config: llmbenchmark/baselines/GraphRouter/configs/adaptor_config.yaml
+  llmbench_collector_config: llmbenchmark/config/data_collector_small_model_config.yaml
+
+  embedding_config: configs/embedding.yaml
+
+  fallback_thresholds: [0.0, 0.05, 0.1, 0.2, 0.4, 0.6, 0.8, 1.0]

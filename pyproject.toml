@@ -1,0 +1,31 @@
+[project]
+name = "duoroute"
+version = "0.2.0"
+description = "Dual-channel dense-reward LLM routing with model-card embeddings"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24",
+  "torch>=2.0",
+  "loguru>=0.7",
+  "pyyaml>=6.0",
+  "tqdm>=4.66",
+  "sentence-transformers>=2.7.0",
+  "transformers>=4.51.0",
+  "accelerate>=0.30.0",
+]
+
+[project.optional-dependencies]
+embeddings = ["sentence-transformers>=2.7.0", "transformers>=4.51.0", "accelerate>=0.30.0"]
+
+[project.scripts]
+duoroute-build-data = "duoroute.build_data:main"
+duoroute-build-embeddings = "duoroute.build_embeddings:main"
+duoroute-train = "duoroute.train:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]

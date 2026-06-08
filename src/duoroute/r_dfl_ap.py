@@ -1,0 +1,25 @@
+"""Backward-compatible shim — prefer ``duoroute.regretrouter``."""
+
+from duoroute.regretrouter import (  # noqa: F401
+    CASCADE_METHOD_NAME,
+    OURS_METHOD_NAME,
+    InitMode,
+    LossMode,
+    RareWeightMode,
+    RDFLAPRouter,
+    RDFLAPTrainConfig,
+    RegretRouterTrainConfig,
+    RouterVersion,
+    SDFLAPRouter,
+    ap_init_distribution,
+    flat_init_distribution,
+    infer_choices,
+    infer_probs,
+    make_router,
+    random_init_distribution,
+    routing_potential,
+    train_r_dfl_ap,
+    train_regretrouter,
+    train_reranker,
+    uniform_init_distribution,
+)

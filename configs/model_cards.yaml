@@ -1,0 +1,124 @@
+model_cards:
+  Qwen3-8B:
+    feature: Qwen3-8B is an 8B instruction-tuned language model with strong reasoning, coding, and multilingual capabilities.
+    capability: [reasoning, coding, multilingual]
+    provider: Alibaba
+    context_length: 131072
+    input_price: 0.035
+    output_price: 0.138
+
+  Llama-3.1-8B-Instruct:
+    feature: Llama-3.1-8B-Instruct is Meta's 8B instruction-tuned model for general chat, reasoning, and tool use.
+    capability: [reasoning, chat, tool-use]
+    provider: Meta
+    context_length: 131072
+    input_price: 0.015
+    output_price: 0.02
+
+  DeepSeek-R1-0528-Qwen3-8B:
+    feature: DeepSeek-R1-0528-Qwen3-8B is a reasoning-optimized 8B model distilled for extended thinking and math-heavy tasks.
+    capability: [reasoning, math, chain-of-thought]
+    specialty: [math, reasoning]
+    input_price: 0.03
+    output_price: 0.11
+
+  DeepSeek-R1-Distill-Qwen-7B:
+    feature: DeepSeek-R1-Distill-Qwen-7B is a 7B reasoning model distilled from DeepSeek-R1 for efficient chain-of-thought inference.
+    capability: [reasoning, math]
+    specialty: [math]
+    input_price: 0.04
+    output_price: 0.10
+
+  gemma-2-9b-it:
+    feature: Gemma-2-9B-IT is Google's 9B instruction-tuned model for general language understanding and reasoning.
+    capability: [reasoning, chat]
+    provider: Google
+    input_price: 0.02
+    output_price: 0.036
+
+  Fin-R1:
+    feature: Fin-R1 is a finance-domain language model optimized for financial reasoning and quantitative analysis.
+    capability: [finance, reasoning]
+    specialty: [finance]
+    input_price: 0.04
+    output_price: 0.10
+
+  Llama-3.1-8B-UltraMedical:
+    feature: Llama-3.1-8B-UltraMedical is a medical-domain 8B model tuned for clinical QA and biomedical reasoning.
+    capability: [medical, reasoning]
+    specialty: [health]
+    input_price: 0.015
+    output_price: 0.02
+
+  Llama-3.1-Nemotron-Nano-8B-v1:
+    feature: Llama-3.1-Nemotron-Nano-8B-v1 is NVIDIA's compact 8B model optimized for efficient reasoning and chat.
+    capability: [reasoning, chat]
+    provider: NVIDIA
+    input_price: 0.015
+    output_price: 0.02
+
+  Intern-S1-mini:
+    feature: Intern-S1-mini is a compact InternLM reasoning model based on Qwen3-8B for research-oriented tasks.
+    capability: [reasoning, research]
+    provider: Shanghai AI Lab
+    input_price: 0.035
+    output_price: 0.138
+
+  MiniCPM4.1-8B:
+    feature: MiniCPM4.1-8B is an edge-efficient 8B model designed for strong performance under low compute budgets.
+    capability: [reasoning, efficiency]
+    input_price: 0.0
+    output_price: 0.0
+
+  OpenThinker3-7B:
+    feature: OpenThinker3-7B is a 7B open reasoning model focused on transparent chain-of-thought problem solving.
+    capability: [reasoning, math]
+    specialty: [math]
+
+  Qwen2.5-Coder-7B-Instruct:
+    feature: Qwen2.5-Coder-7B-Instruct is a code-specialized 7B model for program synthesis and bug fixing.
+    capability: [coding]
+    specialty: [coding]
+
+  NVIDIA-Nemotron-Nano-9B-v2:
+    feature: NVIDIA-Nemotron-Nano-9B-v2 is a 9B reasoning model with improved instruction following and math performance.
+    capability: [reasoning, math]
+    provider: NVIDIA
+    input_price: 0.04
+    output_price: 0.16
+
+  DeepHermes-3-Llama-3-8B-Preview:
+    feature: DeepHermes-3-Llama-3-8B-Preview is a Llama-3.1-based 8B model tuned for roleplay, reasoning, and alignment.
+    capability: [reasoning, chat]
+    input_price: 0.03
+    output_price: 0.11
+
+  cogito-v1-preview-llama-8B:
+    feature: cogito-v1-preview-llama-8B is an experimental Llama-3.1 8B model emphasizing deliberative reasoning.
+    capability: [reasoning]
+
+  granite-3.3-8b-instruct:
+    feature: granite-3.3-8b-instruct is IBM's enterprise-oriented 8B instruction model for grounded and governed generation.
+    capability: [enterprise, reasoning]
+    provider: IBM
+
+  glm-4-9b-chat:
+    feature: glm-4-9b-chat is a bilingual 9B chat model with strong Chinese and English reasoning capabilities.
+    capability: [multilingual, reasoning]
+    specialty: [Chinese]
+    provider: Zhipu
+
+  GLM-Z1-9B-0414:
+    feature: GLM-Z1-9B-0414 is a reasoning-focused 9B GLM model optimized for math and logic tasks.
+    capability: [reasoning, math]
+    specialty: [math]
+    provider: Zhipu
+
+  internlm3-8b-instruct:
+    feature: internlm3-8b-instruct is Shanghai AI Lab's 8B general instruction model for reasoning and knowledge tasks.
+    capability: [reasoning, knowledge]
+    provider: Shanghai AI Lab
+
+  MiMo-7B-RL-0530:
+    feature: MiMo-7B-RL-0530 is a 7B reinforcement-learned model optimized for reasoning and alignment.
+    capability: [reasoning]
